@@ -11,13 +11,15 @@ Employee Leave | DashLite Admin Template
 
 
 <div class="nk-content ">
+    <h3 class="nk-block-title page-title">Employee Leave Information</h3>
     <div class="container-fluid">
         <div class="nk-content-inner">
             <div class="nk-content-body">
                 <div class="nk-block-head">
                     <div class="nk-block-between g-3">
+
                         <div class="nk-block-head-content">
-                            <h3 class="nk-block-title page-title">Employee Leave Information</h3>
+                            
                             <div class="nk-block-des text-soft">
                                 <!-- <p>You have total 937 Employees Leave Information.</p> -->
                             </div>
@@ -27,10 +29,14 @@ Employee Leave | DashLite Admin Template
                                 <a href="#" class="btn btn-icon btn-trigger toggle-expand mr-n1" data-target="pageMenu"><em class="icon ni ni-menu-alt-r"></em></a>
                                 <div class="toggle-expand-content" data-content="pageMenu">
                                     <ul class="nk-block-tools justify-between g-3">
-                                        <li><a href="#" class="btn btn-white btn-outline-light"><em class="icon ni ni-upload-cloud"></em><span>PDF</span></a></li>
-                                        <li><a href="#" class="btn btn-white btn-outline-light"><em class="icon ni ni-download-cloud"></em><span>CSV</span></a></li>
-                                        <li><a href="#" class="btn btn-white btn-outline-light"><em class="icon ni ni-upload-cloud"></em><span>Import</span></a></li>
-                                        <li><a href="#" class="btn btn-white btn-outline-light"><em class="icon ni ni-download-cloud"></em><span>Export</span></a></li>
+                                        <li>
+                                            Year&nbsp; <input type="text" id="leave_year" name="leave_year" />&nbsp;
+                                            Employee ID&nbsp; <input type="text" id="emp_id" name="emp_id" />&nbsp;
+                                            <a href="{{route('check.availability')}}" class="btn btn-white btn-outline-light"><em class="icon ni ni-upload-cloud"></em><span>Check Availability</span>
+                                            </a>
+                                        </li>
+                                         <li><a href="" data-toggle="modal" data-target="#addLeave" class="btn text-white bg-primary"><em class="icon ni ni-plus"></em><span>Non Paid</span></a></li>
+                                      
                                         <li><a href="#" data-toggle="modal" data-target="#addLeave" class="btn text-white bg-primary"><em class="icon ni ni-plus"></em><span>Add New</span></a></li>
                                     </ul>
                                 </div>
@@ -91,7 +97,7 @@ Employee Leave | DashLite Admin Template
                                                  <span class="amount">{{ $leavedata->leave_total_day }}</span>
                                                 </span>
                                             </td>
-                                            <td class="tb-odr-action">
+                                            <!-- <td class="tb-odr-action">
                                                 <div class="tb-odr-btns d-none d-sm-inline">
                                                     
                                                     <a href="html/crm/invoice-details.html" class="btn btn-dim btn-sm btn-primary">View</a>
@@ -99,7 +105,7 @@ Employee Leave | DashLite Admin Template
                                                     <a href="html/crm/invoice-details.html" class="btn btn-dim btn-sm btn-primary">Delete</a>
                                                 </div>
                                                 <a href="html/crm/invoice-details.html" class="btn btn-pd-auto d-sm-none"><em class="icon ni ni-chevron-right"></em></a>
-                                            </td>
+                                            </td> -->
                                         </tr><!-- .tb-odr-item -->
                                         @endforeach
                                        

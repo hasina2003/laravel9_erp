@@ -60,7 +60,7 @@ return new class extends Migration
             $table->Integer('emp_leave_deduction_year')->default(0);
             $table->string('emp_blood_group');
             $table->string('emp_status');
-            
+            $table->Integer('active_status')->default(0);
             $table->foreign('dept_id')->references('id')->on('departments')->onDelete('cascade');
             $table->foreign('desig_id')->references('id')->on('designations')->onDelete('cascade');
             $table->timestamps();

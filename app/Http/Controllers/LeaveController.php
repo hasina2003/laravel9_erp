@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Leave;
 use Carbon\Carbon;
-
+use PDF;
+use DB;
 class LeaveController extends Controller
 {
     /**
@@ -77,6 +78,7 @@ class LeaveController extends Controller
             $leave->leave_from=$leave_from;
             $leave->leave_to=$leave_to;
             $leave->leave_total_day=$diff->d + 1;
+            $leave->leave_status="Paid";
             $leave->save();
             // dd("success");
             return redirect('/leave');
@@ -127,4 +129,21 @@ class LeaveController extends Controller
     {
         //
     }
+
+    public function CheckAvailability()
+    {
+       // $chk_total_leave=DB::table('leaves')->sum('leave_total_day')->where('att_date','edit_date')->get();
+        $chk_leave=DB::table('leaves')
+        ->join('leavetypes','leaves.leave_type_id','leavetypes.id')
+       ->select('leavetypes.leave_type','leavetypes.leave_day','leaves.*')->get();
+        // ->where('edit_date',$edit_date)->get();
+    
+        // $chk_leave = Leave::all();
+        $pdf = PDF::loadView('pdf.leave_check_availability',compact('chk_leave'));
+        return $pdf->download('leave_check_availability.pdf');
+    }
+    
+   
+
+
 }

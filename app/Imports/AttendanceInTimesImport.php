@@ -18,8 +18,7 @@ class AttendanceInTimesImport implements ToModel,WithHeadingRow
     {
         return new AttendancesInTimeFromFile([
             'emp_id'     => $row['emp_id'],
-            'att_in_time'     => $row['att_in_time'],
-            'att_status'     => $row['att_status'],
+            'att_time'     => $row['att_time'],
         ]);
     }
 }

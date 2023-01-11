@@ -103,6 +103,9 @@
                                     <li class="nk-menu-item">
                                         <a href="{{ route('monthly.attendance') }}" class="nk-menu-link"><span class="nk-menu-text">Monthly Attendanced</span></a>
                                     </li>
+                                     <!-- <li class="nk-menu-item">
+                                        <a href="{{ route('attendance.intime') }}" class="nk-menu-link"><span class="nk-menu-text">Monthly Attendance In-Time</span></a>
+                                    </li> -->
                                     <li class="nk-menu-item">
                                         <a href="{{route('attendance.overtime')}}" class="nk-menu-link"><span class="nk-menu-text">Overtime</span></a>
                                     </li>
@@ -586,53 +589,19 @@
                             <div class="nk-header-news d-none d-xl-block">
                                 <div class="nk-news-list">
                                     <a class="nk-news-item" href="#">
-                                        <div class="nk-news-icon">
+                                        <!-- <div class="nk-news-icon">
                                             <em class="icon ni ni-card-view"></em>
-                                        </div>
-                                        <div class="nk-news-text">
-                                            <p>Do you know the latest update of 2021? <span> A overview of our is now available on YouTube</span></p>
-                                            <em class="icon ni ni-external"></em>
+                                        </div> -->
+                                        <div class="nk-news-item">
+                                            <p>ERP - <span> (Enterprise Resource Planning)</span></p>
+                                           
                                         </div>
                                     </a>
                                 </div>
                             </div><!-- .nk-header-news -->
                             <div class="nk-header-tools">
                                 <ul class="nk-quick-nav">
-                                    <li class="dropdown language-dropdown d-none d-sm-block mr-n1">
-                                        <a href="#" class="dropdown-toggle nk-quick-nav-icon" data-toggle="dropdown">
-                                            <div class="user-avatar sm border border-light">
-                                                <img src="./images/flags/english-sq.png" alt="">
-                                            </div>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-s1">
-                                            <ul class="language-list">
-                                                <li>
-                                                    <a href="#" class="language-item">
-                                                        <img src="./images/flags/english.png" alt="" class="language-flag">
-                                                        <span class="language-name">English</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="language-item">
-                                                        <img src="./images/flags/spanish.png" alt="" class="language-flag">
-                                                        <span class="language-name">Español</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="language-item">
-                                                        <img src="./images/flags/french.png" alt="" class="language-flag">
-                                                        <span class="language-name">Français</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="language-item">
-                                                        <img src="./images/flags/turkey.png" alt="" class="language-flag">
-                                                        <span class="language-name">Türkçe</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li><!-- .dropdown -->
+                                    
                                     <li class="dropdown user-dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                             <div class="user-toggle">
@@ -672,7 +641,7 @@
                                             </div>
                                         </div>
                                     </li><!-- .dropdown -->
-                                    <li class="dropdown notification-dropdown mr-n1">
+                                    <!-- <li class="dropdown notification-dropdown mr-n1">
                                         <a href="#" class="dropdown-toggle nk-quick-nav-icon" data-toggle="dropdown">
                                             <div class="icon-status icon-status-info"><em class="icon ni ni-bell"></em></div>
                                         </a>
@@ -737,13 +706,13 @@
                                                             <div class="nk-notification-time">2 hrs ago</div>
                                                         </div>
                                                     </div>
-                                                </div><!-- .nk-notification -->
-                                            </div><!-- .nk-dropdown-body -->
+                                                </div>
+                                            </div>
                                             <div class="dropdown-foot center">
                                                 <a href="#">View All</a>
                                             </div>
                                         </div>
-                                    </li><!-- .dropdown -->
+                                    </li> -->
                                 </ul><!-- .nk-quick-nav -->
                             </div><!-- .nk-header-tools -->
                         </div><!-- .nk-header-wrap -->

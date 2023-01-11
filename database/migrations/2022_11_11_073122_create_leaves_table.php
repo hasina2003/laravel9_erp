@@ -20,6 +20,7 @@ return new class extends Migration
             $table->date('leave_from');
             $table->date('leave_to');
             $table->integer('leave_total_day');
+            $table->string('leave_status')->nullable();
             $table->timestamps();
         });
     }

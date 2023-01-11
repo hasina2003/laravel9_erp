@@ -47,7 +47,8 @@ class Employee extends Model
         'emp_total_overtime_hour_month',
         'emp_total_overtime_hour_year',
         'emp_blood_group',
-        'emp_status'
+        'emp_status',
+        'active_status'
      ];
 
 

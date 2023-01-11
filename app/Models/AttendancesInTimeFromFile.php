@@ -10,7 +10,6 @@ class AttendancesInTimeFromFile extends Model
     use HasFactory;
      protected $fillable = [
         'emp_id',
-        'att_in_time',
-        'att_status'
+        'att_time'
      ];
 }

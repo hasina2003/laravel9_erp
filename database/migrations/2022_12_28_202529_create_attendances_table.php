@@ -18,13 +18,14 @@ return new class extends Migration
             $table->unsignedBigInteger('emp_id');
             $table->string('att_year');
             $table->string('att_month');
-            $table->string('att_date');
-            $table->string('att_start_time')->nullable();
-            $table->string('att_end_time')->nullable();
+            $table->date('att_date');
+            $table->datetime('att_start_time')->nullable();
+            $table->datetime('att_end_time')->nullable();
             $table->Integer('att_late_count')->nullable();
             $table->decimal('att_overtime_hour')->nullable();
             $table->string('att_status');
             $table->string('edit_date')->nullable();
+            $table->string('leavetype_id')->nullable();
             $table->foreign('emp_id')->references('id')->on('employees')->onDelete('cascade');
             $table->timestamps();
         });

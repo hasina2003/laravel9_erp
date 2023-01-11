@@ -12,7 +12,7 @@ All Attendance | DashLite Admin Template
                     <div class="nk-block-between g-3">
                         <div class="nk-block-head-content">
                             <h3 class="nk-block-title page-title">Employee Attendance</h3>
-             <form role="form"  action="{{ route('import.attendance') }}" method="post" enctype="multipart/form-data">
+            <!--  <form role="form"  action="{{ route('import.attendance') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="box-body">
                     <div class="form-group">
@@ -23,7 +23,7 @@ All Attendance | DashLite Admin Template
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
-            </form>
+            </form> -->
                             
                         </div><!-- .nk-block-head-content -->
                         <div class="nk-block-head-content">

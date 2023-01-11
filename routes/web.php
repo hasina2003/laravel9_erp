@@ -69,6 +69,10 @@ Route::get('viewpay-slip/{emp_id}/{salary_month}/{salary_year}', [SalaryControll
 Route::resource('advanced-salary', AdvancedSalaryController::class);
 Route::resource('increment-salary', IncrementSalaryController::class);
 Route::resource('leave', LeaveController::class);
+Route::controller(LeaveController::class)->group(function () {
+	Route::get('check-availability', 'CheckAvailability')->name('check.availability');
+});
+
 Route::resource('leave-type', LeavetypeController::class);
 
 

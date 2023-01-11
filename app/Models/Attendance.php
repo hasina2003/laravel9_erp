@@ -18,7 +18,8 @@ class Attendance extends Model
         'att_late_count',
         'att_overtime_hour',
         'att_status',
-        'edit_date'
+        'edit_date',
+        'leavetype_id'
      ];
 
      public function employee(){

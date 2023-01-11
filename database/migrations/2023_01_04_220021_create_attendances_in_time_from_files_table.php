@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('attendances_in_time_from_files', function (Blueprint $table) {
             $table->id();
             $table->Integer('emp_id');
-            $table->dateTime('att_in_time');
-            $table->string('att_status');
+            $table->string('att_time');
+            $table->string('att_status')->default('Present');
             $table->timestamps();
         });
     }

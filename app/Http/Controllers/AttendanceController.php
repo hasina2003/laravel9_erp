@@ -309,18 +309,16 @@ class AttendanceController extends Controller
 
     public function AttendanceOvertime() 
     {
-       $attendanceovertime=Attendance::all();
+       $attendanceovertime=Attendance::all()->where('att_overtime_hour','>','0');
        
-       // $totaltime=$endtime->diffInMinutes($starttime);
-      $start  = new Carbon('2018-10-04 15:00:03');
-      $end    = new Carbon('2018-10-05 17:00:09');
-       //$start  = new Carbon('12:00:03');
-      // $end    = new Carbon('17:00:09');
-       $totaltime=$end->diffInHours($start);
-       echo "<pre>";
-       print_r($totaltime);
-       //dd($totaltime);
-       //return view('attendance_overtime'); 
+      
+      // $start  = new Carbon('2018-10-04 15:00:03');
+      // $end    = new Carbon('2018-10-05 17:00:09');
+      // $totaltime=$end->diffInHours($start);
+      // echo "<pre>";
+      // print_r($totaltime);
+       
+       return view('attendance_overtime',compact('attendanceovertime')); 
     }
 
 

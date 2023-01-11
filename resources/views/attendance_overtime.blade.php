@@ -1,6 +1,6 @@
 @extends('layouts.theme')
 @section('page_title')
-All Customer | DashLite Admin Template
+All Employee | DashLite Admin Template
 @endsection
 @section('content')
 
@@ -12,19 +12,14 @@ All Customer | DashLite Admin Template
                 <div class="nk-block-head">
                     <div class="nk-block-between g-3">
                         <div class="nk-block-head-content">
-                            <h3 class="nk-block-title page-title">All Customer</h3>
+                            <h3 class="nk-block-title page-title">All Employee's Overtime</h3>
                         </div><!-- .nk-block-head-content -->
                         <div class="nk-block-head-content">
                             <div class="toggle-wrap nk-block-tools-toggle">
                                 <a href="#" class="btn btn-icon btn-trigger toggle-expand mr-n1" data-target="pageMenu"><em class="icon ni ni-menu-alt-r"></em></a>
                                 <div class="toggle-expand-content" data-content="pageMenu">
                                     <ul class="nk-block-tools justify-between g-3">
-                                        <li><a href="{{route('customer.list')}}" class="btn btn-white btn-outline-light"><em class="icon ni ni-upload-cloud"></em><span>Overtime List</span></a></li>
-                                       <!--  <li><a href="#" class="btn btn-white btn-outline-light"><em class="icon ni ni-download-cloud"></em><span>Item Category List</span></a></li>
-                                        
-                                        <li><a href="#" class="btn btn-white btn-outline-light"><em class="icon ni ni-download-cloud"></em><span>Item Color List</span></a></li> 
-                                        <li><a href="#" class="btn btn-white  btn-outline-light"><em class="icon ni ni-download-cloud"></em><span>Item Size  List</span></a></li>  -->
-                                        <li><a href="#" data-toggle="modal" data-target="#addDesignation" class="btn text-white bg-primary"><em class="icon ni ni-plus"></em><span>Add New</span></a></li>
+                                        <!-- <li><a href="" class="btn btn-white btn-outline-light"><em class="icon ni ni-upload-cloud"></em><span>Overtime List</span></a></li> -->
                                     </ul>
                                 </div>
                             </div><!-- .toggle-wrap -->
@@ -50,10 +45,10 @@ All Customer | DashLite Admin Template
              <tr>
                <td>{{$overtime->emp_id}}</td>
                <td>{{$overtime->att_date}}</td>
-               <td>{{$overtime->start_time}}</td>
-               <td>{{$overtime->end_time}}</td>
-               <td>{{$overtime->overtime}}</td>
-             <td>
+               <td>{{$overtime->att_start_time}}</td>
+               <td>{{$overtime->att_end_time}}</td>
+               <td>{{$overtime->att_overtime_hour}}</td>
+            <!--  <td>
               <div class="tb-odr-btns d-none d-sm-inline">
                <a href="{{route('view.customer')}}">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-binoculars" viewBox="0 0 16 16">
@@ -73,7 +68,7 @@ All Customer | DashLite Admin Template
                </a>
              </div>
                                                     
-           </td>
+           </td> -->
          </tr><!-- .tb-odr-item -->
        @endforeach
        </tbody>
